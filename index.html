@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewpoint" content="width=device width,initial-scale-=1">
+	<title>Slide Show</title>
+</head>
+<body>
+<section>
+	<img class="slide" src="/home/nce5-12/Downloads/1.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/2.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/3.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/4.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/5.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/6.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/7.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/8.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/9.jpeg" style="width:100%">
+	<img class="slide" src="/home/nce5-12/Downloads/10.jpeg" style="width:100%">
+</section>
+<script language="javascript">
+	var index=0;
+	slideshow();
+	function slideshow()
+	{
+		var i;
+		var x=document.getElementsByClassName("slide");
+		for(i=0;i<x.length;i++)
+		{
+			x[i].style.display="none";
+		}
+		index++;
+		if(index>x.length)
+		{
+			index=1;
+		}
+		x[index-1].style.display="block";
+		setTimeout(slideshow,3000);
+	}
+</script>
+</body>
+</html>
